@@ -1,11 +1,9 @@
 {
-  "compilerOptions":{
-    "target":"es2017",
-    "module":"commonjs",
-    "allowJs":true,
-    "esModuleInterop":true,
-    "skipLibCheck":true,
-    "forceConsistentCasingInFileNames":true,
-    "outDir":"./dist",
-    }
+  "compilerOptions": {
+    "sourceMap": true,
+    "outDir": "./dist",
+    "strict": true,
+    "lib": ["esnext"],
+    "esModuleInterop": true
+  }
 }
