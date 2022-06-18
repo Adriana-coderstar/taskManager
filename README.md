@@ -1,3 +1,3 @@
-## taskManager
+## :clipboard: TaskManager
 
 ### :warning: Em desenvolvimento
