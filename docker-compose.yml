@@ -13,11 +13,18 @@ services:
     environment: 
       - MYSQL_ROOT_PASSWORD=root 
       - TZ=America/Sao_Paulo
-  app:
+  backend:
     container_name: 'backend'
     build: ./backend
     ports:
       - '3001:3001'
     depends_on:
       - database-task
+  frontend:
+    container_name: 'frontend'
+    build: ./frontend
+    ports:
+      - '3000:3000'
+    depends_on:
+      - backend
 
