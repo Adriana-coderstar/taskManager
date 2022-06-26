@@ -1,6 +1,6 @@
 import React from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
 import * as api from '../service/request';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 function Login() {
   const navigate = useNavigate();
@@ -9,14 +9,13 @@ function Login() {
   const [password, setPassword] = React.useState('');
   const [isLogged, setIsLogged] = React.useState(false);
 
-  const login = async (event) => {
-    event.preventDefault();
+  const login = async (e) => {
+    e.preventDefault();
     try {
       const { data } = await api.requestLogin({
         email,
         password,
       });
-      console.log(data);
       localStorage.setItem('user', JSON.stringify(data));
       setIsLogged(true);
     } catch (error) {
@@ -46,7 +45,7 @@ function Login() {
         <button style={{ margin: '5px' }} onClick={login}>
           Enviar
         </button>
-        <button onSubmit={() => navigate('/register')}>Cadastrar</button>
+        <button onClick={() => navigate('/register')}>Cadastrar</button>
       </form>
     </section>
   );
