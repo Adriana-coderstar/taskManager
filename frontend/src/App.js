@@ -1,9 +1,13 @@
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import LoginRoutes from './routes/LoginRoutes';
+
 function App() {
   return (
-    <div>
-      <h1>TaskManager</h1>
-    </div>
-  )
+    <BrowserRouter>
+      <LoginRoutes />
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
