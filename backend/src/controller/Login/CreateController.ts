@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import CreateLoginService from '../service/Login/CreateLoginService';
+import CreateLoginService from '../../service/Login/CreateLoginService';
 
 class CreateController {
   async create(req: Request, res: Response, next: NextFunction) {
