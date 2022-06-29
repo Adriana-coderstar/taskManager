@@ -1,8 +1,20 @@
+/*
+  Warnings:
+
+  - You are about to drop the `Task` table. If the table is not empty, all the data it contains will be lost.
+
+*/
+-- DropForeignKey
+ALTER TABLE "Task" DROP CONSTRAINT "task_ibfk_1";
+
+-- DropTable
+DROP TABLE "Task";
+
 -- CreateTable
 CREATE TABLE "tasks" (
     "id" SERIAL NOT NULL,
-    "task" VARCHAR(255) NOT NULL,
-    "status" VARCHAR(255) NOT NULL,
+    "task" TEXT NOT NULL,
+    "status" TEXT NOT NULL,
     "userId" INTEGER NOT NULL,
 
     CONSTRAINT "tasks_pkey" PRIMARY KEY ("id")
