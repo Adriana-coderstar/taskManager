@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import LoginService from '../service/Login/LoginService';
+import LoginService from '../../service/Login/LoginService';
 
 class LoginController {
   async find(req: Request, res: Response, next: NextFunction) {
