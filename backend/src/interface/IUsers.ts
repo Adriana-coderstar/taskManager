@@ -1,5 +1,5 @@
 export interface ICreate {
-  id?: string;
+  id?: number;
   email: string;
   password: string;
 }
