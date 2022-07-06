@@ -1,6 +1,9 @@
 import { Task } from '@prisma/client';
-import { ICreateTasks } from './ITask';
+import { ICreateTasks, IFindTasks } from './ITask';
 
 export interface ITaskCreate {
-  create({ task, status, userId }: ICreateTasks): Promise<Task>;
+  create({ id, task, status, userId }: ICreateTasks): Promise<Task>;
+  findAll({ userId }: IFindTasks): Promise<Task[]>;
+  updateTask({ id, task, status }: ICreateTasks): Promise<Task>;
+  delete(id: string): Promise<Task>;
 }
