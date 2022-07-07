@@ -25,13 +25,9 @@ class TaskController {
 
   async find(req: Request, res: Response, next: NextFunction) {
     try {
-      const {
-        tokenData: {
-          data: { id: userId },
-        },
-      } = req.body;
+      const userId = Number(req.body.tokenData.data.id);
 
-      const findTask = await TaskService.findAll(userId);
+      const findTask = await TaskService.findAll({ userId });
       return res.status(200).json(findTask);
     } catch (error) {
       return next(error);
