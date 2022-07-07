@@ -16,7 +16,6 @@ const TokenValidate = async (
 
     const decode = jwt.verify(token as string, SECRET as string);
     req.body.tokenData = decode;
-    // console.log(decode);
 
     next();
   } catch (error: any) {
