@@ -20,7 +20,9 @@ class TaskService implements ITaskCreate {
     return newTask;
   }
   async findAll({ userId }: IFindTasks): Promise<Task[]> {
-    return await prismaClient.task.findMany({ where: { userId } });
+    return await prismaClient.task.findMany({
+      where: { userId },
+    });
   }
 
   async updateTask({ id, task, status }: ICreateTasks): Promise<Task> {
