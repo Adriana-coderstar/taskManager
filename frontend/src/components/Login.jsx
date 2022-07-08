@@ -17,7 +17,7 @@ function Login() {
         password,
       });
       localStorage.setItem('user', JSON.stringify(data));
-      setIsLogged(true);
+      navigate(`/task/${data.id}`);
     } catch (error) {
       setIsLogged(false);
     }
