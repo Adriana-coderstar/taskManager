@@ -6,7 +6,7 @@ import { ICreateUsers } from '../../interface/ICreateRepository';
 import generateToken from '../../helpers/jwtGenerator';
 
 class CreateLoginService implements ICreateUsers {
-  async createUser({ email, password }: ICreate): Promise<User | any> {
+  async createUser({ email, password }: ICreate): Promise<User | Error> {
     const checkEmail = await prismaClient.user.findUnique({
       where: {
         email,
