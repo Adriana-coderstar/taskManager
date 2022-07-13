@@ -30,7 +30,7 @@ class CreateLoginService implements ICreateUsers {
     const newUser = {
       id: user.id,
       email: user.email,
-      token,
+      password: user.password,
     };
 
     return newUser;
