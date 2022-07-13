@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import LoginRoutes from './routes/LoginRoutes';
+import Routes from './routes/routes';
 
 function App() {
   return (
     <BrowserRouter>
-      <LoginRoutes />
+      <Routes />
     </BrowserRouter>
   );
 }
