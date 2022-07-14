@@ -1,5 +1,5 @@
 import React from 'react';
-import * as api from '../service/request';
+import * as api from '../../service/requestLogin';
 import { Navigate } from 'react-router-dom';
 
 function Register() {
@@ -12,20 +12,13 @@ function Register() {
     try {
       await api.createUsers({ email, password });
 
-      const { data } = await api.requestLogin({
-        email,
-        password,
-      });
-      localStorage.setItem('createUser', JSON.stringify(data));
-
       setIsLogged(true);
     } catch (error) {
       setIsLogged(false);
     }
   };
 
-  if (isLogged) return <Navigate to="/tasks" />;
-
+  if (isLogged) return <Navigate to={'/login'} />;
   return (
     <section>
       <form>

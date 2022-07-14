@@ -8,7 +8,7 @@ const TokenValidate = async (
   next: NextFunction,
 ) => {
   try {
-    const token = req.headers.authorization;
+    const token = req.headers.authorization?.split(' ')[1] as string | number;
 
     if (!token) return res.status(401).json({ message: 'Token not found' });
 
@@ -16,7 +16,6 @@ const TokenValidate = async (
 
     const decode = jwt.verify(token as string, SECRET as string);
     req.body.tokenData = decode;
-    // console.log(decode);
 
     next();
   } catch (error: any) {

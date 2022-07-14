@@ -2,5 +2,5 @@ import { User } from '@prisma/client';
 import { ICreate } from './IUsers';
 
 export interface ICreateUsers {
-  createUser({ email, password }: ICreate): Promise<User | null>;
+  createUser({ id, email, password }: ICreate): Promise<User | Error>;
 }

@@ -7,9 +7,10 @@ import TaskPage from '../page/TaskPage';
 function LoginRoutes() {
   return (
     <Routes>
-      <Route exact path="/" element={<LoginPage />} />
+      <Route path="/" element={<LoginPage />} />
+      <Route exact path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
-      <Route path="/tasks" element={<TaskPage />} />
+      <Route path="/task/:id" element={<TaskPage />} />
     </Routes>
   );
 }

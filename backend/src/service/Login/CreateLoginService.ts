@@ -3,10 +3,9 @@ import { User } from '@prisma/client';
 import { ICreate } from '../../interface/IUsers';
 import { prismaClient } from '../../database/prismaClient';
 import { ICreateUsers } from '../../interface/ICreateRepository';
-import generateToken from '../../helpers/jwtGenerator';
 
 class CreateLoginService implements ICreateUsers {
-  async createUser({ email, password }: ICreate): Promise<User | any> {
+  async createUser({ email, password }: ICreate): Promise<User | Error> {
     const checkEmail = await prismaClient.user.findUnique({
       where: {
         email,
@@ -22,17 +21,11 @@ class CreateLoginService implements ICreateUsers {
       },
     });
 
-    const token = generateToken({
-      id: user.id.toString(),
-      email: user.email,
-    });
-
     const newUser = {
       id: user.id,
       email: user.email,
-      token,
+      password: user.password,
     };
-
     return newUser;
   }
 }

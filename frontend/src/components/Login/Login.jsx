@@ -1,13 +1,12 @@
 import React from 'react';
-import * as api from '../service/request';
-import { Navigate, useNavigate } from 'react-router-dom';
+import * as api from '../../service/requestLogin';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
   const navigate = useNavigate();
 
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
-  const [isLogged, setIsLogged] = React.useState(false);
 
   const login = async (e) => {
     e.preventDefault();
@@ -17,13 +16,11 @@ function Login() {
         password,
       });
       localStorage.setItem('user', JSON.stringify(data));
-      setIsLogged(true);
+      navigate(`/task/${data.id}`);
     } catch (error) {
-      setIsLogged(false);
+      alert(error.response.data.error);
     }
   };
-
-  if (isLogged) return <Navigate to="/tasks" />;
 
   return (
     <section>
