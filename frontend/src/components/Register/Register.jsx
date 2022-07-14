@@ -12,20 +12,13 @@ function Register() {
     try {
       await api.createUsers({ email, password });
 
-      const { data } = await api.requestLogin({
-        email,
-        password,
-      });
-      localStorage.setItem('createUser', JSON.stringify(data));
-
       setIsLogged(true);
     } catch (error) {
       setIsLogged(false);
     }
   };
 
-  if (isLogged) return <Navigate to="/task" />;
-
+  if (isLogged) return <Navigate to={'/login'} />;
   return (
     <section>
       <form>
