@@ -27,11 +27,15 @@ export const getTask = async (id, token) => {
 };
 
 export const updateTask = async (id, task, status, token) => {
-  const response = api.put(`/task/${id}`, task, status, {
-    headers: {
-      Authorization: `token ${token}`,
+  const response = api.put(
+    '/task',
+    { id, task, status },
+    {
+      headers: {
+        Authorization: `token ${token}`,
+      },
     },
-  });
+  );
   return response.data;
 };
 
