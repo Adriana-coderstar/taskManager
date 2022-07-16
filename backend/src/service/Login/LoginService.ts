@@ -6,7 +6,7 @@ import { prismaClient } from '../../database/prismaClient';
 import generateToken from '../../helpers/jwtGenerator';
 
 class LoginService implements ILoginUsers {
-  async findUser({ email, password }: ILogin): Promise<User | any> {
+  async findUser({ email, password }: ILogin): Promise<User | Error> {
     const secretPass = md5(password);
 
     const checkUser = await prismaClient.user.findUnique({
@@ -24,6 +24,7 @@ class LoginService implements ILoginUsers {
     const userData = {
       id: checkUser.id,
       email: checkUser.email,
+      password: checkUser.password,
       token: token,
     };
 
