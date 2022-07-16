@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 import { IToken } from '../interface/IToken';
 
 const options = {
-  expiresIn: '3h',
+  expiresIn: '3d',
 };
 
 const SECRET = process.env.JWT_SECRET;
