@@ -7,20 +7,29 @@ function CreateTask() {
 
   const handleClick = async () => {
     await createTask(id, input, 'Pendente', token);
+    setInput('');
+  };
+
+  const getKeyUpInput = async (event) => {
+    if (event.key === 'Enter') {
+      await createTask(id, input, 'Pendente', token);
+      setInput('');
+    }
   };
 
   return (
-    <form>
+    <section>
       <input
         type="text"
         value={input}
+        onKeyUp={getKeyUpInput}
         onChange={({ target: { value } }) => setInput(value)}
       />
 
       <button type="button" onClick={handleClick}>
         Adiciona
       </button>
-    </form>
+    </section>
   );
 }
 

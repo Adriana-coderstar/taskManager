@@ -34,7 +34,7 @@ class TaskController {
     try {
       const { id, task, status } = req.body;
 
-      const updateTask = await TaskService.updateTask({ id, status, task });
+      const updateTask = await TaskService.updateTask({ id, task, status });
 
       return res.status(200).json(updateTask);
     } catch (error) {

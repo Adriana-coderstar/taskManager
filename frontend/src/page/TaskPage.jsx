@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { getTask } from '../service/requestTask';
 import CreateTask from '../components/CreateTask/CreateTask';
-import SelectTask from '../components/SelectTask/SelectTask';
+import Task from '../components/Task/Task';
 
 function TaskPage() {
   const [tasks, setTask] = React.useState([]);
@@ -20,7 +20,7 @@ function TaskPage() {
     <div>
       <CreateTask />
       {tasks.map((task) => (
-        <SelectTask key={task.id} task={task} />
+        <Task key={task.id} task={task} />
       ))}
     </div>
   );
