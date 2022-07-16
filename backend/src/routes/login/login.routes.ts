@@ -7,6 +7,6 @@ import TokenValidate from '../../middleware/tokenValidate';
 const route = Router();
 
 route.post('/register', CreateController.create);
-route.post('/login', loginValidate, TokenValidate, LoginController.find);
+route.post('/login', loginValidate, LoginController.find);
 
 export default route;
