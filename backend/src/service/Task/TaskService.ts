@@ -23,6 +23,11 @@ class TaskService implements ITaskCreate {
   async findAll({ userId }: IFindTasks): Promise<Task[]> {
     return await prismaClient.task.findMany({
       where: { userId },
+      orderBy: [
+        {
+          id: 'asc',
+        },
+      ],
     });
   }
 
