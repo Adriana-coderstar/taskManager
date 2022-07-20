@@ -1,6 +1,8 @@
 import React from 'react';
-import { requestLogin } from '../service/requestLogin';
+import { requestLogin } from '../../service/requestLogin';
 import { useNavigate } from 'react-router-dom';
+import { Container } from './Login.style';
+import Header from '../../components/Header/Header';
 
 function LoginPage() {
   const navigate = useNavigate();
@@ -24,22 +26,25 @@ function LoginPage() {
 
   return (
     <section>
-      <form>
+      <Header />
+      <Container>
         <input
           type="email"
           value={email}
-          placeholder="Digite seu email"
+          placeholder="E-mail Adress"
           onChange={({ target: { value } }) => setEmail(value)}
         />
+        <span></span>
         <input
           type="password"
           value={password}
-          placeholder="Digite sua senha"
+          placeholder="Password"
           onChange={({ target: { value } }) => setPassword(value)}
         />
+        <span className="line-span"></span>
         <button onClick={login}>Enviar</button>
         <button onClick={() => navigate('/register')}>Cadastrar</button>
-      </form>
+      </Container>
     </section>
   );
 }
