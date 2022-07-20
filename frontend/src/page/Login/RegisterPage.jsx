@@ -1,6 +1,8 @@
 import React from 'react';
-import { createUsers } from '../service/requestLogin';
 import { Navigate } from 'react-router-dom';
+import { Container } from './Login.style';
+import Header from '../../components/Header/Header';
+import { createUsers } from '../../service/requestLogin';
 
 function RegisterPage() {
   const [email, setEmail] = React.useState('');
@@ -20,25 +22,26 @@ function RegisterPage() {
   if (isLogged) return <Navigate to={'/login'} />;
   return (
     <section>
-      <form>
+      <Header />
+      <Container>
         <input
           type="email"
           value={email}
-          placeholder="Digite seu email"
+          placeholder="E-mail Adress"
           onChange={({ target: { value } }) => setEmail(value)}
         />
-
+        <span></span>
         <input
           type="password"
           value={password}
-          placeholder="Digite sua senha"
+          placeholder="Password"
           onChange={({ target: { value } }) => setPassword(value)}
         />
-
+        <span></span>
         <button type="button" onClick={register}>
           Criar conta
         </button>
-      </form>
+      </Container>
     </section>
   );
 }
