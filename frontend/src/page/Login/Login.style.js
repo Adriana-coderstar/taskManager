@@ -39,7 +39,7 @@ export const Container = styled.section`
     background-position: ${({ theme }) => theme.positionPadlock};
     background-repeat: no-repeat;
     background-size: ${({ theme }) => theme.sizePadlock};
-    color: #cfcfcf;
+    color: ${({ theme }) => theme.text};
     padding-left: 22px;
     text-indent: 20px;
   }
