@@ -29,7 +29,7 @@ export const Container = styled.section`
     background-position: ${({ theme }) => theme.positionImg};
     background-repeat: no-repeat;
     background-size: ${({ theme }) => theme.sizeImg};
-    color: #cfcfcf;
+    color: ${({ theme }) => theme.text};
     padding-left: 22px;
     text-indent: 20px;
   }
