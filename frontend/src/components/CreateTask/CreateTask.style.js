@@ -1,23 +1,22 @@
 import styled from 'styled-components';
+import { ReactComponent as Button } from '../../img/buttonAdd.svg';
 
 export const Container = styled.div`
-  align-items: center;
   background: transparent;
+  padding: 20px;
+  width: 100%;
+  align-items: center;
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  margin-top: -480px;
-  position: absolute;
-  width: 80%;
 
   input {
+    margin-bottom: 24px;
     background-color: ${({ theme }) => theme.inputTask};
-    border-radius: 22px;
+    border-radius: 12px;
     color: ${({ theme }) => theme.text};
     font-size: 1.6rem;
+    align-items: center;
     height: 4vh;
-    margin-left: 42px;
-    padding: 25px;
     width: 64%;
   }
 
@@ -25,16 +24,11 @@ export const Container = styled.div`
     color: ${({ theme }) => theme.text};
     font-size: 1.3rem;
   }
+`;
 
-  img {
-    background: transparent;
-    cursor: pointer;
-    margin-left: -10px;
-    margin-top: 29px;
-    width: 5vw;
-  }
-
-  button {
-    background: transparent;
-  }
+export const ButtonAdd = styled(Button)`
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: 77px;
 `;
