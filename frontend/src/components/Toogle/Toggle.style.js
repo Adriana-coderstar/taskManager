@@ -5,8 +5,8 @@ export const ToggleDarkMode = styled.div`
     cursor: pointer;
     height: 11vh;
     position: absolute;
-    right: 450px;
-    top: 30px;
+    right: 485px;
+    top: 26px;
     width: 100px;
     z-index: 1;
   }
