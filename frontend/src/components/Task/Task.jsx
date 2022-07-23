@@ -22,7 +22,9 @@ function Task({ task }) {
 
   return (
     <Container>
-      <p>{task.task}</p>
+      <div>
+        <p>{task.task}</p>
+      </div>
       <Selected>
         <select onChange={updateStatus} defaultValue={task.status}>
           <option value="Pendente">Pendente</option>

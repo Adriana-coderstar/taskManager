@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from './TaskPage.style';
+import { Container, Div } from './TaskPage.style';
 import Task from '../../components/Task/Task';
 import { getTask } from '../../service/requestTask';
 import Header from '../../components/Header/Header';
@@ -22,10 +22,12 @@ function TaskPage() {
     <>
       <Header />
       <Container>
-        <CreateTask />
-        {tasks.map((task) => (
-          <Task key={task.id} task={task} />
-        ))}
+        <Div>
+          <CreateTask />
+          {tasks.map((task) => (
+            <Task key={task.id} task={task} />
+          ))}
+        </Div>
       </Container>
     </>
   );
