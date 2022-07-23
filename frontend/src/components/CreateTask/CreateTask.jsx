@@ -1,5 +1,6 @@
 import React from 'react';
 import { createTask } from '../../service/requestTask';
+import { ButtonAdd, Container } from './CreateTask.style';
 
 function CreateTask() {
   const [input, setInput] = React.useState('');
@@ -18,18 +19,16 @@ function CreateTask() {
   };
 
   return (
-    <section>
+    <Container>
       <input
         type="text"
         value={input}
+        placeholder="Add new task"
         onKeyUp={getKeyUpInput}
         onChange={({ target: { value } }) => setInput(value)}
       />
-
-      <button type="button" onClick={handleClick}>
-        Adiciona
-      </button>
-    </section>
+      <ButtonAdd onClick={handleClick} />
+    </Container>
   );
 }
 
