@@ -6,9 +6,9 @@ import padlockLight from '../img/padlock-light.svg';
 
 export default createGlobalStyle`
   * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     html, body{
