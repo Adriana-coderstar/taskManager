@@ -1,7 +1,6 @@
 import React from 'react';
 import { createTask } from '../../service/requestTask';
-import { Container } from './CreateTask.style';
-import Button from '../../img/buttonAdd.svg';
+import { ButtonAdd, Container } from './CreateTask.style';
 
 function CreateTask() {
   const [input, setInput] = React.useState('');
@@ -28,10 +27,7 @@ function CreateTask() {
         onKeyUp={getKeyUpInput}
         onChange={({ target: { value } }) => setInput(value)}
       />
-
-      <button type="button" onClick={handleClick}>
-        <img src={Button} alt="Button will add a task to your task list" />
-      </button>
+      <ButtonAdd onClick={handleClick} />
     </Container>
   );
 }
