@@ -2,12 +2,15 @@ import styled from 'styled-components';
 import { ReactComponent as Button } from '../../img/buttonAdd.svg';
 
 export const Container = styled.div`
+  align-items: center;
   background: transparent;
   padding: 20px;
   width: 100%;
   align-items: center;
   display: flex;
   justify-content: center;
+  padding: 20px;
+  width: 100%;
 
   input {
     margin-bottom: 24px;
@@ -18,6 +21,7 @@ export const Container = styled.div`
     align-items: center;
     height: 4vh;
     width: 64%;
+    padding-left: 12px;
   }
 
   input::placeholder {
