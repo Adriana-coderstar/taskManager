@@ -13,8 +13,13 @@ export default createGlobalStyle`
 
     html, body{
       background: ${({ theme }) => theme.background};
+      background-attachment: fixed;
+
+
       color: ${({ theme }) => theme.text};
       height: 100%;
+      width: 100%;
+
     }
 
     *, button, input {
