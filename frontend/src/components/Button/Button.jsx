@@ -30,7 +30,6 @@ function Buttons({ id, show }) {
           className="button-trash"
           src={trash}
           alt="Button to remove the task"
-          onClick={handleRemove}
         />
       </button>
     </Container>
