@@ -8,12 +8,13 @@ export const Container = styled.section`
   color: ${({ theme }) => theme.text};
   display: flex;
   flex-direction: row;
+  height: 6vh;
   justify-content: space-between;
-  margin-top: 12px;
+  margin-bottom: 20px;
+  margin-left: 59px;
   padding: 4px;
   position: relative;
   width: 90%;
-  height: 60px;
 
   p {
     background-color: transparent;
