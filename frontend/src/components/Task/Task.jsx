@@ -6,11 +6,17 @@ import { updateTask } from '../../service/requestTask';
 
 function Task({ task }) {
   const [show, setShow] = React.useState(false);
+  const [lineThrough, setlineThrough] = React.useState(false);
   const [inputUpdate, setInputUpdate] = React.useState(task.task);
   const { token } = JSON.parse(localStorage.getItem('user'));
 
   const updateStatus = async ({ target }) => {
     await updateTask(task.id, task.task, target.value, token);
+    if (target.value === 'Concluido') {
+      setlineThrough(true);
+    } else {
+      setlineThrough(false);
+    }
   };
 
   const getKeyUpdate = async (e) => {
@@ -23,7 +29,7 @@ function Task({ task }) {
   return (
     <Container>
       <div>
-        <p>{task.task}</p>
+        <p className={lineThrough ? 'complete' : ''}>{task.task}</p>
       </div>
       <Selected>
         <select onChange={updateStatus} defaultValue={task.status}>
