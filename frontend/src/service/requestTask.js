@@ -18,16 +18,16 @@ export const createTask = async (id, task, status, token) => {
 };
 
 export const getTask = async (id, token) => {
-  const response = await api.get(`/task/${id}`, {
+  const { data } = await api.get(`/task/${id}`, {
     headers: {
       Authorization: `token ${token}`,
     },
   });
-  return response.data;
+  return data;
 };
 
 export const updateTask = async (id, task, status, token) => {
-  const response = api.put(
+  const { data } = api.put(
     '/task',
     { id, task, status },
     {
@@ -36,14 +36,14 @@ export const updateTask = async (id, task, status, token) => {
       },
     },
   );
-  return response.data;
+  return data;
 };
 
 export const deleteTask = async (id, token) => {
-  const response = api.delete(`/task/${id}`, {
+  const { data } = api.delete(`/task/${id}`, {
     headers: {
       Authorization: `token ${token}`,
     },
   });
-  return response.data;
+  return data;
 };
