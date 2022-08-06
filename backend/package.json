@@ -5,8 +5,8 @@
   "main": "./build/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/server.ts",
-    "start": "nodemon -e ts,json dist/server.js",
+    "start": "nodemon src/server.js",
+    "dev": "nodemon -e ts,json dist/server.js",
     "prestart": "npx prisma generate && npx prisma migrate dev",
     "build": "rimraf dist && tsc",
     "up": "docker-compose up",

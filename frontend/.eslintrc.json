@@ -21,7 +21,9 @@
   "plugins": [
     "react"
   ],
-  "rules": {},
+  "rules": {
+    // "react-hooks/exhaustive-deps": "off"
+  },
   "settings": {
     "react": {
       "version": "detect"
