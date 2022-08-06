@@ -9,7 +9,10 @@ function LoginPage() {
 
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
+  const [showError, setShowError] = React.useState(false);
+  const [messageError, setMessageError] = React.useState('');
 
+  console.log(email);
   const login = async (e) => {
     e.preventDefault();
     try {
@@ -17,9 +20,13 @@ function LoginPage() {
         email,
         password,
       });
+
       localStorage.setItem('user', JSON.stringify(data));
+
       navigate(`/task/${data.id}`);
     } catch (error) {
+      setMessageError(error.response.data.error);
+      setShowError(true);
       console.log(error.response.data.error);
     }
   };
@@ -42,6 +49,8 @@ function LoginPage() {
           onChange={({ target: { value } }) => setPassword(value)}
         />
         <span className="line-span"></span>
+
+        {showError && <p>{messageError}</p>}
         <button onClick={login}>Enviar</button>
         <button onClick={() => navigate('/register')}>Cadastrar</button>
       </Container>
