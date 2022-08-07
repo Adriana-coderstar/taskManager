@@ -22,7 +22,7 @@ services:
     depends_on:
       - db
     environment: 
-      - DATABASE_URL=postgres://admin:password@task:5432/db_task?schema=public?connect_timeout=300
+      - DATABASE_URL=postgres://zryfkvgdroehgy:29b50c1a50c4704f7bdecf2aff0ee5c76e64b04529a37304f09bec392c923074@ec2-34-239-241-121.compute-1.amazonaws.com:5432/d2tbs3id9qmvcv
       - JWT_SECRET=SECRET
   frontend:
     container_name: 'frontend'
