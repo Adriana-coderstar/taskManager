@@ -7,6 +7,8 @@ import { Container, Welcome, ButtonOut } from './Header.style';
 function Header() {
   const navigate = useNavigate();
 
+  const { pathname } = window.location;
+
   const emoji = React.useMemo(() => {
     const indice = Math.floor(Math.random() * emojis.length);
     return emojis[indice];
@@ -19,9 +21,11 @@ function Header() {
         <span>{emoji}</span>
       </Welcome>
       <ButtonOut>
-        <button onClick={() => navigate('/login')}>
-          <img src={out} alt="Exit button" />
-        </button>
+        {pathname === '/task:id' && (
+          <button onClick={() => navigate('/login')}>
+            <img src={out} alt="Exit button" />
+          </button>
+        )}
       </ButtonOut>
     </Container>
   );
