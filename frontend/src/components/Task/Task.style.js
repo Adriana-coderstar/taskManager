@@ -23,6 +23,10 @@ export const Container = styled.section`
     width: 9vw;
   }
 
+  .complete {
+    text-decoration: line-through;
+  }
+
   .input-update {
     background-color: ${({ theme }) => theme.bgTask};
     bottom: 12px;
