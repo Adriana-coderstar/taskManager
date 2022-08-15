@@ -10,20 +10,20 @@ Desenvolvida com arquiterura __MSC__ (Camada de Controller e Service), __Restful
   </summary><br>
 
   1. Instale as dependências backend
-    - `cd backend`
-    - `npm install`
+      - `cd backend`
+      - `npm install`
   
-  2. Configure o .env com seus dados
-  DATABASE_URL=postgresql://`janedoe`:`mypassword`@`host`:5432/mydb?schema=public?connect_timeout=300
+  2. Configure o .env com seus dados exemplo:
+      - DATABASE_URL=postgresql://`janedoe`:`mypassword`@`host`:5432/mydb?schema=public?connect_timeout=300
 
-  4. Rodar aplicação, ao rodar esse comando automaticamente configura o Prisma e roda as migratios conforme o script no package.json:
-    - `npm start`
+  3. Rodar aplicação, ao rodar esse comando automaticamente configura o Prisma e roda as migratios conforme o script no package.json:
+      - `npm start`
 </details>
 
 
 <details>
   <summary>
-    <strong> :mag_right: Criar usuário </strong>
+    <strong> Criar usuário </strong>
   </summary><br>
   
   1 - Método de requisição: POST
@@ -50,7 +50,7 @@ Desenvolvida com arquiterura __MSC__ (Camada de Controller e Service), __Restful
 
 <details>
   <summary>
-    <strong> :mag_right: Fazer login </strong>
+    <strong> Fazer login </strong>
   </summary><br>
 
   1- Métodos de requisição: Post
@@ -60,7 +60,7 @@ Desenvolvida com arquiterura __MSC__ (Camada de Controller e Service), __Restful
 ```json
 {
   "email": "email@gmail.com",
-  "password": "string"
+  "password": "123456"
 }
 ```
 
@@ -77,7 +77,7 @@ Desenvolvida com arquiterura __MSC__ (Camada de Controller e Service), __Restful
 
 <details>
   <summary>
-    <strong> :mag_right: Criar tarefa </strong>
+    <strong> Criar tarefa </strong>
   </summary><br>
 
   1 - Métodos de requisição: Post
@@ -108,7 +108,7 @@ Desenvolvida com arquiterura __MSC__ (Camada de Controller e Service), __Restful
 
 <details>
   <summary>
-    <strong> :mag_right: Listar todas as tarefas criadas </strong>
+    <strong> Listar todas as tarefas criadas </strong>
   </summary><br>
 
   1- Métodos de requisição: Get
@@ -140,7 +140,7 @@ Desenvolvida com arquiterura __MSC__ (Camada de Controller e Service), __Restful
  
 <details>
   <summary>
-    <strong> :mag_right: Atualizar uma tarefa </strong>
+    <strong> Atualizar uma tarefa </strong>
   </summary><br>
 
   1- Métodos de requisição: Put
@@ -150,7 +150,7 @@ Desenvolvida com arquiterura __MSC__ (Camada de Controller e Service), __Restful
   3 - Rota `/task` o endpoint deve receber a seguinte estrutura:
 
   ```json
-  {
+   {
     "id": 1,
     "task": "Ir a academia",
     "status": "Andamento",
@@ -173,7 +173,7 @@ Desenvolvida com arquiterura __MSC__ (Camada de Controller e Service), __Restful
 
 <details>
   <summary>
-    <strong> :mag_right: Deletar uma tarefa </strong>
+    <strong> Deletar uma tarefa </strong>
   </summary><br>
 
   1- Métodos de requisição: Del
