@@ -1,6 +1,6 @@
 ## TaskManager
 
-Aplicação desenvolvida para organização de tarefas. App desenvolvido com tela de login para acessar a tarefa utilizando validação de token , tela de registro para se cadastrar com email e senha.
+Aplicação desenvolvida para organização de tarefas. App desenvolvido com tela de login para acessar a tarefa utilizando autenticação de token , tela de registro para se cadastrar com email e senha.
 
 <details>
   <summary>
@@ -15,7 +15,7 @@ Aplicação desenvolvida para organização de tarefas. App desenvolvido com tel
 
   - Criação de endpoints no padrão _REST_
 
-  - Validação dos dados com token utilizando _JWT_
+  - Autenticação dos dados com token utilizando _JWT_
 
   > Documentação: `Backend:` [Clique aqui](https://github.com/Adriana-coderstar/taskManager/blob/main/backend/README.md)
 
