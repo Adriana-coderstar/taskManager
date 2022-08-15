@@ -69,6 +69,6 @@ Aplicação desenvolvida para organização de tarefas. App desenvolvido com tel
     <strong> :whale2: Rodando Docker </strong>
   </summary>
   
- - No terminal utilizar o comando `docker-compose up -d `
+ - No terminal utilizar o comando `docker-compose up -d --build`
   </details>
 
