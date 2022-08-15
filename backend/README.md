@@ -23,7 +23,7 @@ Desenvolvida com arquiterura __MSC__ (Camada de Controller e Service), __Restful
 
 <details>
   <summary>
-    <strong> :mag_right: Criar usuário </strong>
+    <strong> Criar usuário </strong>
   </summary><br>
   
   1 - Método de requisição: POST
@@ -50,7 +50,7 @@ Desenvolvida com arquiterura __MSC__ (Camada de Controller e Service), __Restful
 
 <details>
   <summary>
-    <strong> :mag_right: Fazer login </strong>
+    <strong> Fazer login </strong>
   </summary><br>
 
   1- Métodos de requisição: Post
@@ -77,7 +77,7 @@ Desenvolvida com arquiterura __MSC__ (Camada de Controller e Service), __Restful
 
 <details>
   <summary>
-    <strong> :mag_right: Criar tarefa </strong>
+    <strong> Criar tarefa </strong>
   </summary><br>
 
   1 - Métodos de requisição: Post
@@ -108,7 +108,7 @@ Desenvolvida com arquiterura __MSC__ (Camada de Controller e Service), __Restful
 
 <details>
   <summary>
-    <strong> :mag_right: Listar todas as tarefas criadas </strong>
+    <strong> Listar todas as tarefas criadas </strong>
   </summary><br>
 
   1- Métodos de requisição: Get
@@ -140,7 +140,7 @@ Desenvolvida com arquiterura __MSC__ (Camada de Controller e Service), __Restful
  
 <details>
   <summary>
-    <strong> :mag_right: Atualizar uma tarefa </strong>
+    <strong> Atualizar uma tarefa </strong>
   </summary><br>
 
   1- Métodos de requisição: Put
@@ -173,7 +173,7 @@ Desenvolvida com arquiterura __MSC__ (Camada de Controller e Service), __Restful
 
 <details>
   <summary>
-    <strong> :mag_right: Deletar uma tarefa </strong>
+    <strong> Deletar uma tarefa </strong>
   </summary><br>
 
   1- Métodos de requisição: Del
