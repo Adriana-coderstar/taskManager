@@ -1,4 +1,4 @@
-version: '3.7'
+version: "3.7"
 
 services:
   db:
@@ -8,26 +8,26 @@ services:
     ports:
       - 5432:5432
     environment:
-      DB_USER: ${POSTGRES_USER}
-      DB_PASSWORD: ${POSTGRES_PASSWORD}
-      DB_NAME: ${POSTGRES_DB}
+      - POSTGRES_DB=db_task
+      - POSTGRES_USER=todo
+      - POSTGRES_PASSWORD=todo
     volumes:
       - tasks:/data/postgres
   backend:
-    container_name: 'backend'
+    container_name: "backend"
     build: ./backend
     ports:
-      - '3001:3001'
+      - "3001:3001"
     depends_on:
       - db
-    environment: 
-      - DATABASE_URL=postgres://admin:password@task:5432/db_task?schema=public?connect_timeout=300
+    environment:
+      - DATABASE_URL=postgres://todo:todo@task:5432/db_task?schema=public?connect_timeout=300
       - JWT_SECRET=SECRET
   frontend:
-    container_name: 'frontend'
+    container_name: "frontend"
     build: ./frontend
     ports:
-      - '3000:3000'
+      - "3000:3000"
     depends_on:
       - backend
 
