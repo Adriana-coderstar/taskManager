@@ -6,7 +6,7 @@ Desenvolvida com arquiterura __MSC__ (Camada de Controller e Service), __Restful
 
 <details>
   <summary>
-    <strong> Para rodar aplicação local </strong>
+    <strong> Rodar aplicação local </strong>
   </summary><br>
 
   1. Instale as dependências backend
