@@ -17,12 +17,10 @@ Aplicação desenvolvida para organização de tarefas. App desenvolvido com tel
 
   - Validação dos dados com token utilizando _JWT_
 
-  > `Backend:` [Clique aqui]()
-  > `Frontend:` [Clique aqui]()
-
+  > Documentação: `Backend:` [Clique aqui](https://github.com/Adriana-coderstar/taskManager/blob/main/backend/README.md)
 
 </details>
-
+https://github.com/Adriana-coderstar/taskManager/blob/main/backend/README.md
 <details>
   <summary>
     <strong> 👩‍💻 Frontend </strong>
@@ -33,6 +31,8 @@ Aplicação desenvolvida para organização de tarefas. App desenvolvido com tel
   - Requisição api com a biblioteca _Axios_ 
 
   - Estilização usando a lib _Styled-Components_
+  
+  Dcoumentação:`Frontend:` [Clique aqui](https://github.com/Adriana-coderstar/taskManager/blob/main/frontend/README.md)
 
 </details>
 
