@@ -20,7 +20,7 @@ Aplicação desenvolvida para organização de tarefas. App desenvolvido com tel
   > Documentação: `Backend:` [Clique aqui](https://github.com/Adriana-coderstar/taskManager/blob/main/backend/README.md)
 
 </details>
-https://github.com/Adriana-coderstar/taskManager/blob/main/backend/README.md
+
 <details>
   <summary>
     <strong> 👩‍💻 Frontend </strong>
