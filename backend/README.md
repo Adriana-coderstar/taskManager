@@ -10,14 +10,14 @@ Desenvolvida com arquiterura __MSC__ (Camada de Controller e Service), __Restful
   </summary><br>
 
   1. Instale as dependências backend
-    - `cd backend`
-    - `npm install`
+      - `cd backend`
+      - `npm install`
   
-  2. Configure o .env com seus dados
-  DATABASE_URL=postgresql://`janedoe`:`mypassword`@`host`:5432/mydb?schema=public?connect_timeout=300
+  2. Configure o .env com seus dados exemplo:
+      - DATABASE_URL=postgresql://`janedoe`:`mypassword`@`host`:5432/mydb?schema=public?connect_timeout=300
 
-  4. Rodar aplicação, ao rodar esse comando automaticamente configura o Prisma e roda as migratios conforme o script no package.json:
-    - `npm start`
+  3. Rodar aplicação, ao rodar esse comando automaticamente configura o Prisma e roda as migratios conforme o script no package.json:
+      - `npm start`
 </details>
 
 
@@ -60,7 +60,7 @@ Desenvolvida com arquiterura __MSC__ (Camada de Controller e Service), __Restful
 ```json
 {
   "email": "email@gmail.com",
-  "password": "string"
+  "password": "123456"
 }
 ```
 
@@ -150,7 +150,7 @@ Desenvolvida com arquiterura __MSC__ (Camada de Controller e Service), __Restful
   3 - Rota `/task` o endpoint deve receber a seguinte estrutura:
 
   ```json
-  {
+   {
     "id": 1,
     "task": "Ir a academia",
     "status": "Andamento",
