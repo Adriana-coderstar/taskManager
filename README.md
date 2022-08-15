@@ -17,7 +17,7 @@ Aplicação desenvolvida para organização de tarefas. App desenvolvido com tel
 
   - Autenticação dos dados com token utilizando _JWT_
 
-  > Documentação: `Backend:` [Clique aqui](https://github.com/Adriana-coderstar/taskManager/blob/main/backend/README.md)
+  > Documentação: [Clique aqui](https://github.com/Adriana-coderstar/taskManager/blob/main/backend/README.md)
 
 </details>
 
@@ -32,7 +32,7 @@ Aplicação desenvolvida para organização de tarefas. App desenvolvido com tel
 
   - Estilização usando a lib _Styled-Components_
   
-  Dcoumentação:`Frontend:` [Clique aqui](https://github.com/Adriana-coderstar/taskManager/blob/main/frontend/README.md)
+ > Dcoumentação: [Clique aqui](https://github.com/Adriana-coderstar/taskManager/blob/main/frontend/README.md)
 
 </details>
 
