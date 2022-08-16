@@ -15,9 +15,12 @@ Desenvolvida com arquiterura __MSC__ (Camada de Controller e Service), __Restful
   
   2. Configure o .env com seus dados exemplo:
       - DATABASE_URL=postgresql://`janedoe`:`mypassword`@`host`:5432/mydb?schema=public?connect_timeout=300
+  
+  3. Rodar docker-compose do banco de dados:
+      - `docker-compose up`
 
-  3. Rodar aplicação, ao rodar esse comando automaticamente configura o Prisma e roda as migratios conforme o script no package.json:
-      - `npm start`
+  4. Rodar aplicação, ao rodar esse comando automaticamente configura o Prisma e roda as migratios conforme o script no package.json:
+      - `npm run dev`
 </details>
 
 
