@@ -59,7 +59,7 @@ Aplicação desenvolvida para organização de tarefas. App desenvolvido com tel
   </summary>
   
       
-  1. Necessário ter __Node__ instalado e o banco de dados __Postgres__
+  1. Necessário ter __Node__ instalado.
   
   2. Instale as dependências backend
       - `cd backend`
