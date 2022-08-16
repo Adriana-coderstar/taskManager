@@ -59,16 +59,16 @@ Aplicação desenvolvida para organização de tarefas. App desenvolvido com tel
   </summary>
   
       
-  1. Necessário ter Node instalado e o banco de dados Postgres
+  1. Necessário ter __Node__ instalado e o banco de dados __Postgres__
   
   2. Instale as dependências backend
-      - cd backend
-      - npm install
+      - `cd backend`
+      - `npm install`
     
   3. Configurando variável de ambiente:
-      - Modificar o arquivo .envExemple para .env
+      - Modificar o arquivo `.envExemple` para `.env`
 
-      - Alterar DATABASE_URL="postegres://USER:PASSWORD@HOST:PORT/NAME_DATABASE"
+      - Alterar DATABASE_URL="postegres://`USER`:`PASSWORD`@`HOST`:`PORT`/`NAME_DATABASE`"
 
   4. Dentro da pasta backend tem docker-compose.yml para rodar o banco de dados, nele é necessario configurar as environment conforme abaixo:
      -  POSTGRES_USER=`USER`
@@ -76,17 +76,17 @@ Aplicação desenvolvida para organização de tarefas. App desenvolvido com tel
      -  POSTGRES_DB=`NAME_DATABASE`
      
   5. Rodar docker-compose do banco de dados:
-     - docker-compose up
+     - `docker-compose up`
      
   6. Em outro terminal na pasta __backend__ rodar aplicação, esse comando automaticamente configura o __Prisma__ e roda as migratios conforme o script no package.json:
-     - npm start
+     - `npm start`
      
   7. Instale as dependências frontend:
-      - cd frontend
-      - npm install
+      - `cd frontend`
+      - `npm install`
     
   8. Rodar o comando:
-      - npm start
+      - `npm start`
     
   10. Url frontend: ` http://localhost:3000`
    
