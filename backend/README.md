@@ -13,11 +13,22 @@ Desenvolvida com arquiterura __MSC__ (Camada de Controller e Service), __Restful
       - `cd backend`
       - `npm install`
   
-  2. Rodar docker-compose do banco de dados:
+  2. Configurando variável de ambiente:
+      - Modificar o arquivo `env.example` para `.env`
+ 
+      - Alterar DATABASE_URL="postegres://`USER:PASSWORD`@`HOST`:`PORT`/`NAME_DATABASE`"
+  
+  3. Dentro da pasta backend tem docker-compose.yml para rodar o banco de dados, nele é necessario configurar as environment conforme abaixo: 
+      - POSTGRES_USER=`USER`
+      - POSTGRES_PASSWORD=`PASSWORD`
+      - POSTGRES_DB=`NAME_DATABASE`
+  
+  4. Rodar docker-compose do banco de dados:
       - `docker-compose up`
 
-  3. Rodar aplicação, ao rodar esse comando automaticamente configura o Prisma e roda as migratios conforme o script no package.json:
+  5. Em outro terminal rodar aplicação, ao rodar esse comando automaticamente configura o Prisma e roda as migratios conforme o script no package.json:
       - `npm start`
+    
 </details>
 
 
