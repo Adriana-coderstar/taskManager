@@ -1,6 +1,6 @@
 import React from 'react';
-import { Navigate } from 'react-router-dom';
 import { Container } from './Login.style';
+import { Navigate, useNavigate } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import { createUsers } from '../../service/requestLogin';
 
@@ -8,6 +8,7 @@ function RegisterPage() {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [isLogged, setIsLogged] = React.useState(false);
+  const navigate = useNavigate();
 
   const register = async (e) => {
     e.preventDefault();
@@ -40,6 +41,10 @@ function RegisterPage() {
         <span></span>
         <button type="button" onClick={register}>
           Criar conta
+        </button>
+
+        <button type="button" onClick={() => navigate('/login')}>
+          Login
         </button>
       </Container>
     </section>
