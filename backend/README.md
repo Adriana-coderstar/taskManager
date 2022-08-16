@@ -20,7 +20,7 @@ Desenvolvida com arquiterura __MSC__ (Camada de Controller e Service), __Restful
       - `docker-compose up`
 
   4. Rodar aplicação, ao rodar esse comando automaticamente configura o Prisma e roda as migratios conforme o script no package.json:
-      - `npm run dev`
+      - `npm start`
 </details>
 
 
