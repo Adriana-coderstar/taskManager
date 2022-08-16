@@ -12,7 +12,7 @@ Incluidos na aplicação tela de login, registro e tela das tarefas. Utilizando 
       - `cd frontend`
       - `npm install`
 
-  3. Rodar o comando:
+  2. Rodar o comando:
       - `npm start`
 </details>
 
