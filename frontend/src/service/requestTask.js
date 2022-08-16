@@ -5,7 +5,7 @@ const api = axios.create({
 });
 
 export const createTask = async (id, task, status, token) => {
-  const { data } = api.post(
+  const { data } = await api.post(
     `/task/${id}`,
     { task, status },
     {
@@ -27,7 +27,7 @@ export const getTask = async (id, token) => {
 };
 
 export const updateTask = async (id, task, status, token) => {
-  const { data } = api.put(
+  const { data } = await api.put(
     '/task',
     { id, task, status },
     {
@@ -40,7 +40,7 @@ export const updateTask = async (id, task, status, token) => {
 };
 
 export const deleteTask = async (id, token) => {
-  const { data } = api.delete(`/task/${id}`, {
+  const { data } = await api.delete(`/task/${id}`, {
     headers: {
       Authorization: `token ${token}`,
     },
