@@ -8,12 +8,15 @@ Incluidos na aplicação tela de login, registro e tela das tarefas. Utilizando 
     <strong> Rodar aplicação local </strong>
   </summary><br>
 
-  1. Instale as dependências backend
+  1. Instale as dependências frontend:
       - `cd frontend`
       - `npm install`
 
   2. Rodar o comando:
       - `npm start`
+  
+  3. Endereço da aplicação esta na url: 
+      - ` http://localhost:3000`
 </details>
 
 Na aplicação é possível:
