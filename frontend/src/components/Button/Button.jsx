@@ -5,11 +5,12 @@ import editTask from '../../img/edit.svg';
 import { Container } from './Button.style';
 import { deleteTask } from '../../service/requestTask';
 
-function Buttons({ id, show }) {
+function Buttons({ id, show, load }) {
   const { token } = JSON.parse(localStorage.getItem('user'));
 
   const handleRemove = async () => {
     await deleteTask(id, token);
+    load();
   };
 
   const handleEdit = async () => {
@@ -39,6 +40,7 @@ function Buttons({ id, show }) {
 Buttons.propTypes = {
   edit: PropTypes.string,
   id: PropTypes.number,
+  load: PropTypes.func,
   remove: PropTypes.string,
   show: PropTypes.func,
 };

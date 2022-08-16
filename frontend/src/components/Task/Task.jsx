@@ -4,7 +4,7 @@ import Button from '../Button/Button';
 import { Container, Selected } from './Task.style';
 import { updateTask } from '../../service/requestTask';
 
-function Task({ task }) {
+function Task({ task, load }) {
   const [show, setShow] = React.useState(false);
   const [lineThrough, setlineThrough] = React.useState(false);
   const [inputUpdate, setInputUpdate] = React.useState(task.task);
@@ -14,8 +14,10 @@ function Task({ task }) {
     await updateTask(task.id, task.task, target.value, token);
     if (target.value === 'Concluido') {
       setlineThrough(true);
+      load();
     } else {
       setlineThrough(false);
+      load();
     }
   };
 
@@ -23,6 +25,7 @@ function Task({ task }) {
     if (e.key === 'Enter') {
       await updateTask(task.id, inputUpdate, task.status, token);
       setShow(false);
+      load();
     }
   };
 
@@ -37,7 +40,7 @@ function Task({ task }) {
           <option value="Andamento">Andamento</option>
           <option value="Concluido">Concluido</option>
         </select>
-        <Button id={task.id} show={setShow} />
+        <Button load={load} id={task.id} show={setShow} />
       </Selected>
 
       {show && (
@@ -54,6 +57,7 @@ function Task({ task }) {
 }
 
 Task.propTypes = {
+  load: PropTypes.func,
   task: PropTypes.shape({
     id: PropTypes.number,
     status: PropTypes.string,
