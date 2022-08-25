@@ -92,3 +92,8 @@ Aplicação desenvolvida para organização de tarefas. App desenvolvido com tel
    
 </details>
 
+---
+
+Deploy: :point_right: [Aqui](https://taskmanager-ams.netlify.app)
+
+
