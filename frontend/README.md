@@ -26,3 +26,7 @@ Na aplicação é possível:
  - Atualizar uma tarefa
  - Alterar o status atual desse compromisso para `Andamento`, `Pendente` ou `Concluído`
  - Remover uma tarefa da sua lista
+ 
+ ---
+
+Deploy: [Clique aqui](https://taskmanager-ams.netlify.app)
